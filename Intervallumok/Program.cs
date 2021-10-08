@@ -11,20 +11,13 @@ namespace Intervallumok
         static void Main(string[] args)
         {
             Console.WriteLine("Kedves Felhasználó! Adj meg egy intervallumot!");
-            // string nyersintervallum = Console.ReadLine();
+            string nyersintervallum = Console.ReadLine();
+            string[] tomb = nyersintervallum.Split(';'); // darabold fel a szöveget a ;-k mentén
 
-            char karakter = 'a';
-            string szoveg = "abcd";
-
-            string proba = "[-300;1222330[";
-            
-            
-            string[] tomb = proba.Split(';'); // darabold fel a szöveget a ;-k mentén
-
-
-
+            /** /
             Console.WriteLine("tomb[0] : " + tomb[0]);
             Console.WriteLine("tomb[1] : " + tomb[1]);
+            /**/
 
             char balkereteszarojel = tomb[0][0];
             char jobbkereteszarojel = tomb[1][tomb[1].Length-1];
@@ -34,12 +27,23 @@ namespace Intervallumok
             string jobbszamszoveg = tomb[1].Substring(0,tomb[1].Length-1); // 0-ás index = 1. elemtől hossz-1-nyit vegyél
             int jobbszam = int.Parse(jobbszamszoveg);
 
+
+            /** /
+            Console.WriteLine("Az inputot így értelmeztem:");
+
             Console.WriteLine(balkereteszarojel);
             Console.WriteLine(balszam);
             Console.WriteLine(jobbszam);
             Console.WriteLine(jobbkereteszarojel);
+            /**/
 
             // Ide le írjátok majd a kódot!
+            /* ezek a változók, amiket használni kell:  
+             * balszam, 
+             * jobbszam, 
+             * balkereteszarojel, 
+             * jobbkereteszarojel
+             */
 
 
 
@@ -51,9 +55,6 @@ namespace Intervallumok
 
 
 
-
-
-            // balszam, jobbszam, balkereteszarojel, jobbkereteszarojel
 
 
 
